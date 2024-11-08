@@ -34,7 +34,6 @@ def ParseTrainAndDestination(CommandDict,TrainTimesDict):
     if "stops W" in CommandDict:
         train = 'W'
         destination = "WHITEHALL"
-
     #Put train times output into a variable of type string then remove spaces so its easier to parse
     TrainTimes=TrainTimesDict
     TrainTimes=TrainTimes.replace(" ", "")
@@ -54,29 +53,10 @@ def ParseTrainAndDestination(CommandDict,TrainTimesDict):
                }
     return TrainDict
 
-
-while True:
-    MasterDict.update({1:ParseTrainAndDestination(CommandDict[1],TrainTimesDict[1])})
-    print(MasterDict[1])
-    time.sleep(60)
-
-
-
-
 #app = Flask(__name__)
 #@app.route('/')
 #def my_route():
 #    return render_template('index.html', NTrains=NTrainDict, WTrains=WTrainDict)
 
 
-#'''for j in range(60):
-#    for i in CommandDict:
-#        MasterDict.update({i:ParseTrainAndDestination(CommandDict[i],TrainTimesDict[i])})
-#        # Populate individual train Dicts
-#    NTrainDict [1] = MasterDict [1]
-#    NTrainDict [2] = MasterDict [2]
-#    DTrainDict [1] = MasterDict [3]
-#    DTrainDict [2] = MasterDict [4]
-#    RTrainDict [1] = MasterDict [5]
-#    RTrainDict [2] = MasterDict [6]'''
-    
+
